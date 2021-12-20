@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Celso/AndroidStudioProjects/FirebaseAPP/app/src/main/res/layout/activity_cadastro.xml" value="0.32083333333333336" />
-        <entry key="..\:/Users/Celso/AndroidStudioProjects/FirebaseAPP/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/Celso/AndroidStudioProjects/FirebaseAPP/app/src/main/res/layout/activity_contato.xml" value="0.25" />
+        <entry key="..\:/Users/Celso/AndroidStudioProjects/FirebaseAPP/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/Users/Celso/AndroidStudioProjects/FirebaseAPP/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Celso/AndroidStudioProjects/FirebaseAPP/app/src/main/res/layout/rv_contatos_layout.xml" value="0.5" />
       </map>
     </option>
   </component>

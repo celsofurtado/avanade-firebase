@@ -1,4 +1,4 @@
-package br.com.fiap.firebaseapp
+package br.com.fiap.firebaseapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

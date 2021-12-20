@@ -9,14 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseAPP">
+
         <activity
-            android:name=".HomeActivity"
+            android:name=".view.HomeActivity"
             android:exported="false" />
+
         <activity
-            android:name=".CadastroActivity"
+            android:name=".view.CadastroActivity"
             android:exported="false" />
+
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.ContatoActivity"
+            android:exported="false"
+            android:parentActivityName=".view.HomeActivity"/>
+
+        <activity
+            android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

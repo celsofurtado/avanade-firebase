@@ -1,4 +1,4 @@
-package br.com.fiap.firebaseapp
+package br.com.fiap.firebaseapp.model
 
 data class Contato(
     var uid: String = "",
@@ -6,5 +6,6 @@ data class Contato(
     var email: String = "",
     var idade: Int = 0,
     var tel: String = "",
-    var cidade: String = ""
+    var cidade: String = "",
+    var urlFoto: String = ""
 )
