@@ -9,17 +9,19 @@
 
     <Button
         android:id="@+id/bt_sair"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Sair"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_home_novo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_home_novo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Novo Contato"
+        app:layout_constraintEnd_toStartOf="@+id/bt_sair"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bt_sair" />
 

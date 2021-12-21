@@ -27,7 +27,7 @@ class HomeViewModel: ViewModel() {
         val usuarioLogadoId = FirebaseAuth.getInstance().uid
 
         firestore.collection("contatos")
-            .orderBy("nome", Query.Direction.DESCENDING)
+            .orderBy("nome", Query.Direction.ASCENDING)
             .whereEqualTo("uid", usuarioLogadoId)
             .addSnapshotListener { snapshot, error ->
 
@@ -39,10 +39,16 @@ class HomeViewModel: ViewModel() {
 
                 if (snapshot != null) {
                     val documents = snapshot.documents
+
                     documents.forEach {
                         val contato = it.toObject(Contato::class.java)
-                        contatos.add(contato!!)
+                        if (contato != null) {
+                            contato.docId = it.id
+                            contatos.add(contato)
+                        }
+
                     }
+
                 }
                 _contatos.value = contatos
             }

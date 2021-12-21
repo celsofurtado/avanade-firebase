@@ -53,37 +53,36 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
-
-
-
-        exibirContatos()
+        //exibirContatos() <<======== Esse cara foi o culpado
 
     }
 
-    private fun exibirContatos() {
-
-        // criar uma mutableList
-        val contatos = mutableListOf<Contato>()
-
-        FirebaseFirestore.getInstance().collection("contatos")
-            .addSnapshotListener { value, _ ->
-                contatos.clear()
-                for (documento in value!!.documents){
-                    val contato = Contato(
-                        uid = documento.data?.get("uid").toString(),
-                        nome = documento.data?.get("nome").toString(),
-                        email = documento.data?.get("email").toString(),
-                        tel = documento.data?.get("tel").toString(),
-                        cidade = documento.data?.get("cidade").toString(),
-                        idade = documento.data?.get("idade").toString().toInt()
-                    )
-                    contatos.add(contato)
-                }
-                Log.i("avanade", contatos.toString())
-
-                adapter.updateLista(contatos)
-
-            }
-
-    }
+//    private fun exibirContatos() {
+//
+//        // criar uma mutableList
+//        val contatos = mutableListOf<Contato>()
+//
+//        FirebaseFirestore.getInstance().collection("contatos")
+//            .addSnapshotListener { value, _ ->
+//                contatos.clear()
+//                for (documento in value!!.documents){
+//                    val contato = documento.toObject(Contato::class.java)
+////                    val contato = Contato(
+////                        uid = documento.data?.get("uid").toString(),
+////                        nome = documento.data?.get("nome").toString(),
+////                        email = documento.data?.get("email").toString(),
+////                        tel = documento.data?.get("tel").toString(),
+////                        cidade = documento.data?.get("cidade").toString(),
+////                        idade = documento.data?.get("idade").toString().toInt(),
+////                        urlFoto = documento.data?.get("urlFoto").toString()
+////                    )
+//                    contatos.add(contato!!)
+//                }
+//                Log.i("avanade", contatos.toString())
+//
+//                adapter.updateLista(contatos)
+//
+//            }
+//
+//    }
 }

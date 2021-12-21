@@ -7,5 +7,6 @@ data class Contato(
     var idade: Int = 0,
     var tel: String = "",
     var cidade: String = "",
-    var urlFoto: String = ""
+    var urlFoto: String = "",
+    var docId: String = ""
 )

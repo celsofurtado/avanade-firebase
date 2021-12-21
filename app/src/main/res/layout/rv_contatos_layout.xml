@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_contato"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,28 +9,61 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tv_recycler_nome"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Nome do Contato"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textSize="18sp" />
+            android:layout_weight="1"
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/tv_recycler_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email do contato"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardCornerRadius="30dp">
 
-        <TextView
-            android:id="@+id/tv_recycler_telefone"
-            android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/iv_contato_foto_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/hoffs"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Telefone" />
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_recycler_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome do Contato"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_recycler_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email do contato"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/tv_recycler_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefone" />
+
+        </LinearLayout>
+
     </LinearLayout>
+
+
 </androidx.cardview.widget.CardView>
